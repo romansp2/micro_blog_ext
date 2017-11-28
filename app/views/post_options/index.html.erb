@@ -1,0 +1,29 @@
+<h2>Post Options</h2>
+
+<table class="<%= get_table_class%>">
+  <thead>
+    <tr>
+      <th>Posts</th>
+      <th>Option key</th>
+      <th>Option value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post_options.each do |post_option| %>
+      <tr>
+        <td><%= post_option.posts %></td>
+        <td><%= post_option.option_key %></td>
+        <td><%= post_option.option_value %></td>
+        <td><%= link_to 'Show', post_option %></td>
+        <td><%= link_to 'Edit', edit_post_option_path(post_option) %></td>
+        <td><%= link_to 'Destroy', post_option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post Option', new_post_option_path %>

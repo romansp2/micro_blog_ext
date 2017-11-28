@@ -1,0 +1,27 @@
+<p>
+  <strong>User login:</strong>
+  <%= @user.user_login %>
+</p>
+
+<p>
+  <strong>User nicename:</strong>
+  <%= @user.user_nicename %>
+</p>
+
+<p>
+  <strong>User email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>User url:</strong>
+  <%= @user.user_url %>
+</p>
+
+<p>
+  <strong>Display name:</strong>
+  <%= @user.display_name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

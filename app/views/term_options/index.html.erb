@@ -1,0 +1,29 @@
+<h2>Term Options</h2>
+
+<table class="<%= get_table_class%>">
+  <thead>
+    <tr>
+      <th>Terms</th>
+      <th>Option key</th>
+      <th>Option value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @term_options.each do |term_option| %>
+      <tr>
+        <td><%= term_option.terms %></td>
+        <td><%= term_option.option_key %></td>
+        <td><%= term_option.option_value %></td>
+        <td><%= link_to 'Show', term_option %></td>
+        <td><%= link_to 'Edit', edit_term_option_path(term_option) %></td>
+        <td><%= link_to 'Destroy', term_option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Term Option', new_term_option_path %>

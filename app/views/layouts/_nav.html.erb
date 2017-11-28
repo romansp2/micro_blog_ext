@@ -1,0 +1,17 @@
+<nav class="main-nav">
+  <% if user_signed_in? %>
+      <ul class="main-menu">
+        <li><%= link_to 'Users', users_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Users Options', user_options_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Comments', comments_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Comment Options', comment_options_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Terms', terms_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Term Options', term_options_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Taxonomies', term_taxonomies_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Posts', posts_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Post Options', post_options_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Links', links_path, :class => 'menu-item' %></li>
+        <li><%= link_to 'Options', options_path, :class => 'menu-item' %></li>
+      </ul>
+  <% end %>
+</nav>

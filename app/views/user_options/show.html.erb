@@ -1,0 +1,17 @@
+<p>
+  <strong>User:</strong>
+  <%= @user_option.user %>
+</p>
+
+<p>
+  <strong>Option key:</strong>
+  <%= @user_option.option_key %>
+</p>
+
+<p>
+  <strong>Option value:</strong>
+  <%= @user_option.option_value %>
+</p>
+
+<%= link_to 'Edit', edit_user_option_path(@user_option) %> |
+<%= link_to 'Back', user_options_path %>

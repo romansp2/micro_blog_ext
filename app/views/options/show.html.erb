@@ -1,0 +1,17 @@
+<p>
+  <strong>Option name:</strong>
+  <%= @option.option_name %>
+</p>
+
+<p>
+  <strong>Option value:</strong>
+  <%= @option.option_value %>
+</p>
+
+<p>
+  <strong>Autoload:</strong>
+  <%= @option.autoload %>
+</p>
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>

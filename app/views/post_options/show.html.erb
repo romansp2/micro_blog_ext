@@ -1,0 +1,17 @@
+<p>
+  <strong>Posts:</strong>
+  <%= @post_option.posts %>
+</p>
+
+<p>
+  <strong>Option key:</strong>
+  <%= @post_option.option_key %>
+</p>
+
+<p>
+  <strong>Option value:</strong>
+  <%= @post_option.option_value %>
+</p>
+
+<%= link_to 'Edit', edit_post_option_path(@post_option) %> |
+<%= link_to 'Back', post_options_path %>

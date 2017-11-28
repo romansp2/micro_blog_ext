@@ -1,0 +1,72 @@
+<%= form_with(model: link, local: true) do |form| %>
+  <% if link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(link.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+      <ul>
+      <% link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :link_url %>
+    <%= form.text_field :link_url, id: :link_link_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_name %>
+    <%= form.text_field :link_name, id: :link_link_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_image %>
+    <%= form.text_field :link_image, id: :link_link_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_target %>
+    <%= form.text_field :link_target, id: :link_link_target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_description %>
+    <%= form.text_field :link_description, id: :link_link_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_visible %>
+    <%= form.text_field :link_visible, id: :link_link_visible %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_owner %>
+    <%= form.text_field :link_owner, id: :link_link_owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_rating %>
+    <%= form.number_field :link_rating, id: :link_link_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_rel %>
+    <%= form.text_field :link_rel, id: :link_link_rel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_notes %>
+    <%= form.text_area :link_notes, id: :link_link_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_rss %>
+    <%= form.text_field :link_rss, id: :link_link_rss %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

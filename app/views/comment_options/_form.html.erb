@@ -1,0 +1,32 @@
+<%= form_with(model: comment_option, local: true) do |form| %>
+  <% if comment_option.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment_option.errors.count, "error") %> prohibited this comment_option from being saved:</h2>
+
+      <ul>
+      <% comment_option.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comments_id %>
+    <%= form.text_field :comments_id, id: :comment_option_comments_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :option_key %>
+    <%= form.text_field :option_key, id: :comment_option_option_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :option_value %>
+    <%= form.text_area :option_value, id: :comment_option_option_value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

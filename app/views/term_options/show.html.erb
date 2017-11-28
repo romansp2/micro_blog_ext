@@ -1,0 +1,17 @@
+<p>
+  <strong>Terms:</strong>
+  <%= @term_option.terms %>
+</p>
+
+<p>
+  <strong>Option key:</strong>
+  <%= @term_option.option_key %>
+</p>
+
+<p>
+  <strong>Option value:</strong>
+  <%= @term_option.option_value %>
+</p>
+
+<%= link_to 'Edit', edit_term_option_path(@term_option) %> |
+<%= link_to 'Back', term_options_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term_taxonomy_id: 
+  term_order: 1
+
+two:
+  term_taxonomy_id: 
+  term_order: 1

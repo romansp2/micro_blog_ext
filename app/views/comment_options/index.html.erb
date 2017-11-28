@@ -1,0 +1,29 @@
+<h2>Comment Options</h2>
+
+<table class="<%= get_table_class%>">
+  <thead>
+    <tr>
+      <th>Comments</th>
+      <th>Option key</th>
+      <th>Option value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comment_options.each do |comment_option| %>
+      <tr>
+        <td><%= comment_option.comments %></td>
+        <td><%= comment_option.option_key %></td>
+        <td><%= comment_option.option_value %></td>
+        <td><%= link_to 'Show', comment_option %></td>
+        <td><%= link_to 'Edit', edit_comment_option_path(comment_option) %></td>
+        <td><%= link_to 'Destroy', comment_option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment Option', new_comment_option_path %>

@@ -1,0 +1,8 @@
+#set foreign key.
+https://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/add_foreign_key
+
+# set unique.
+t.string :post_name, unique: true
+
+# set index
+, index: true

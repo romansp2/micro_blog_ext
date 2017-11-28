@@ -1,0 +1,27 @@
+<%= form_with(model: term_relationship, local: true) do |form| %>
+  <% if term_relationship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(term_relationship.errors.count, "error") %> prohibited this term_relationship from being saved:</h2>
+
+      <ul>
+      <% term_relationship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :term_taxonomy_id %>
+    <%= form.text_field :term_taxonomy_id, id: :term_relationship_term_taxonomy_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :term_order %>
+    <%= form.number_field :term_order, id: :term_relationship_term_order %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

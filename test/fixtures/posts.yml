@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post_title: MyText
+  post_name: MyString
+  post_excerpt: MyText
+  post_content: MyText
+  post_status: MyString
+  post_author: 
+  post_password: MyString
+  post_content_filtered: MyText
+  post_parent: 
+  post_type: MyString
+  post_mime_type: MyString
+  to_ping: MyText
+  pinged: MyText
+  guid: MyString
+  menu_order: 1
+  comment_count: 
+
+two:
+  post_title: MyText
+  post_name: MyString
+  post_excerpt: MyText
+  post_content: MyText
+  post_status: MyString
+  post_author: 
+  post_password: MyString
+  post_content_filtered: MyText
+  post_parent: 
+  post_type: MyString
+  post_mime_type: MyString
+  to_ping: MyText
+  pinged: MyText
+  guid: MyString
+  menu_order: 1
+  comment_count: 

@@ -1,0 +1,11 @@
+BACKEND.
+1. Create schema.
+2. Authentication: register, login, logout, send-mail-verify, change password.
+3. Page: Setting
+4. Page: Category CRUD
+5. Page: Tags CRUD
+6. Page: Media CRUD
+7. Page: Post CRUD
+8. Page: Page CRUD
+
+FRONTEND.

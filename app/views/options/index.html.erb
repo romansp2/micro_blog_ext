@@ -1,0 +1,29 @@
+<h2>Options</h2>
+
+<table class="<%= get_table_class%>">
+  <thead>
+    <tr>
+      <th>Option name</th>
+      <th>Option value</th>
+      <th>Autoload</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @options.each do |option| %>
+      <tr>
+        <td><%= option.option_name %></td>
+        <td><%= option.option_value %></td>
+        <td><%= option.autoload %></td>
+        <td><%= link_to 'Show', option %></td>
+        <td><%= link_to 'Edit', edit_option_path(option) %></td>
+        <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Option', new_option_path %>

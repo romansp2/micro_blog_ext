@@ -1,0 +1,17 @@
+<p>
+  <strong>Comments:</strong>
+  <%= @comment_option.comments %>
+</p>
+
+<p>
+  <strong>Option key:</strong>
+  <%= @comment_option.option_key %>
+</p>
+
+<p>
+  <strong>Option value:</strong>
+  <%= @comment_option.option_value %>
+</p>
+
+<%= link_to 'Edit', edit_comment_option_path(@comment_option) %> |
+<%= link_to 'Back', comment_options_path %>

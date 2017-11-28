@@ -1,0 +1,32 @@
+<%= form_with(model: user_option, local: true) do |form| %>
+  <% if user_option.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_option.errors.count, "error") %> prohibited this user_option from being saved:</h2>
+
+      <ul>
+      <% user_option.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :user_option_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :option_key %>
+    <%= form.text_field :option_key, id: :user_option_option_key %>
+  </div>
+
+  <div class="field">
+    <%= form.label :option_value %>
+    <%= form.text_area :option_value, id: :user_option_option_value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

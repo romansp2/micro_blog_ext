@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MicroBlog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header id="header" class="clearfix">
+      <div class="container">
+        <%= render 'layouts/header' %>
+      </div>
+    </header>
+
+    <div id="notice" class="container">
+      <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
+
+    <div id="main" class="container">
+      <%= render 'layouts/nav' %>
+
+      <div class="main-inner">
+        <%= yield %>
+      </div>
+    </div>
+
+    <footer id="footer" class="container">
+      <div class="footer-inner">
+        <p class="copyright">Copyright &copy; <a href="http://tranthethang.com">tranthethang.com</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
